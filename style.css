@@ -50,7 +50,7 @@ nav {
     z-index: 100; transition: all 0.3s ease;
 }
 nav.scrolled {
-    padding: 1rem 5%; background: var(--glass);
+    padding: 1rem 10%; background: var(--glass);
     backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
 }
 .logo {
@@ -286,7 +286,7 @@ footer { padding: 4rem 5%; border-top: 1px solid var(--border); background: #0b0
 /* Mobile Devices */
 @media (max-width: 768px) {
     /* Navbar */
-    nav { padding: 1.5rem 1rem; }
+    nav { padding: 1.5rem 2rem; }
     .logo { font-size: 1.2rem; }
     
     /* Hero */
