@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAXT MOBREN | Ultra Techwear</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!--CSS Link-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <!-- Toast Notification -->
+    <div id="toast">Action Successful</div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">Claxt<span class="accent-text">.</span></div>
+        <div class="nav-links">
+            <a href="#hero" class="hover-target">Collections</a>
+            <a href="#products" class="hover-target">New Arrival</a>
+            <a href="#manifesto" class="hover-target">Vision</a>
+            <a href="#tech-specs" class="hover-target">Tech</a>
+        </div>
+        
+        <!-- Professional SVG Cart Icon -->
+        <button class="cart-btn hover-target" id="cartBtn" aria-label="Cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count">0</span>
+        </button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" id="hero">
+        <!-- Left: Text -->
+        <div class="hero-text reveal">
+            <h5>Series V2.0</h5>
+            <h1>Engineered<br>For The<br>Unknown.</h1>
+            <p>Experience the apex of urban utility. Hydrophobic materials meet modular design.</p>
+            <button class="btn-primary hover-target" onclick="actionTrigger('Loading Shop...')">Shop Collection</button>
+        </div>
+
+        <!-- Right: Composition Grid -->
+        <div class="hero-composition">
+            <!-- 1. Main Jacket -->
+            <div class="float-card card-main hover-target tilt-element" onclick="actionTrigger('Main Jacket Selected')">
+                <div class="card-label">Bestseller</div>
+                <img src="https://i.pinimg.com/1200x/32/c8/9e/32c89e024eb284ef8a68fcb6b767c477.jpg" alt="Main Jacket">
+                <button class="quick-add">+</button>
+            </div>
+
+            <!-- 2. Shoes -->
+            <div class="float-card card-shoes hover-target tilt-element" onclick="actionTrigger('Footwear Selected')">
+                <div class="card-label">Footwear</div>
+                <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop" alt="Shoes">
+                <button class="quick-add">+</button>
+            </div>
+
+            <!-- 3. Secondary Jacket -->
+            <div class="float-card card-secondary hover-target tilt-element" onclick="actionTrigger('Parka Selected')">
+                <div class="card-label">New</div>
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1936&auto=format&fit=crop" alt="Second Jacket">
+                <button class="quick-add">+</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Marquee Splitter -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Waterproof // Breathable // Aerodynamic // Future-Proof // Tech-Wear // Urban-Utility //</span>
+            <span>Waterproof // Breathable // Aerodynamic // Future-Proof // Tech-Wear // Urban-Utility //</span>
+        </div>
+    </div>
+
+    <!-- RESTORED SECTION: NEW ARRIVALS -->
+    <section class="products" id="products">
+        <div class="section-header reveal">
+            <div>
+                <p class="sub-head">Selected Gear</p>
+                <h2>New Arrivals</h2>
+            </div>
+            <button class="btn-outline hover-target" onclick="actionTrigger('Loading All Products...')">View All</button>
+        </div>
+
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="card reveal hover-target" onclick="actionTrigger('Vortex Pants Added')">
+                <div class="card-img-box">
+                    <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?q=80&w=2070&auto=format&fit=crop" alt="Item">
+                </div>
+                <div class="card-info">
+                    <div>
+                        <span class="product-name">Vortex Pants</span>
+                        <span class="product-cat">Bottoms</span>
+                    </div>
+                    <button class="add-btn hover-target">+</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card reveal hover-target" style="transition-delay: 0.1s;" onclick="actionTrigger('Nike Air Added')">
+                <div class="card-img-box">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop" alt="Item">
+                </div>
+                <div class="card-info">
+                    <div>
+                        <span class="product-name">Nike Air Zoom</span>
+                        <span class="product-cat">Footwear</span>
+                    </div>
+                    <button class="add-btn hover-target">+</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="card reveal hover-target" style="transition-delay: 0.2s;" onclick="actionTrigger('Tech Tee Added')">
+                <div class="card-img-box">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2070&auto=format&fit=crop" alt="Item">
+                </div>
+                <div class="card-info">
+                    <div>
+                        <span class="product-name">Basic Tech Tee</span>
+                        <span class="product-cat">Tops</span>
+                    </div>
+                    <button class="add-btn hover-target">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE MANIFESTO -->
+    <section class="manifesto" id="manifesto">
+        <div class="manifesto-bg"></div>
+        <div class="manifesto-content reveal">
+            <h2>The City is a <span class="outline-text">Battlefield</span>.</h2>
+            <p>We don't design clothes. We design armor for the modern nomad. Tested in the alleys of Tokyo and the storms of Iceland.</p>
+            <button class="btn-outline hover-target" onclick="actionTrigger('Playing Video...')">Watch The Film ▶</button>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TECH SPECS -->
+    <section class="tech-specs" id="tech-specs">
+        <div class="section-title reveal">
+            <p class="sub-head">Material Science</p>
+            <h3>Beyond Fabric</h3>
+        </div>
+        
+        <div class="specs-grid">
+            <div class="spec-card reveal hover-target">
+                <div class="icon">💧</div>
+                <h4>Hydro-Shield</h4>
+                <p>Nanotech coating repels water, oil, and dirt without sacrificing breathability.</p>
+            </div>
+            <div class="spec-card reveal hover-target">
+                <div class="icon">🌡️</div>
+                <h4>Thermal Adapt</h4>
+                <p>Smart fibers expand to release heat and contract to trap warmth.</p>
+            </div>
+            <div class="spec-card reveal hover-target">
+                <div class="icon">🔗</div>
+                <h4>Fidlock® Systems</h4>
+                <p>Magnetic mechanical fasteners for one-handed operation in motion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: NEWSLETTER -->
+    <section class="newsletter reveal">
+        <div class="newsletter-container">
+            <div class="news-left">
+                <h3>Join The Unit</h3>
+                <p>Get early access to drops and exclusive prototyping logs.</p>
+            </div>
+            <div class="news-right">
+                <form onsubmit="event.preventDefault(); actionTrigger('Subscribed!');">
+                    <input type="email" placeholder="Enter your email" class="hover-target">
+                    <button type="submit" class="hover-target">→</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Claxt<span class="accent-text">.</span></div>
+            <div class="footer-links">
+                <a href="#" class="hover-target">Instagram</a>
+                <a href="#" class="hover-target">Twitter</a>
+                <a href="#" class="hover-target">Legal</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Claxt Mobren. Crafted for Experience.</p>
+    </footer>
+
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+</body>
+</html>
