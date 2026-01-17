@@ -6,7 +6,6 @@ const toast = document.getElementById('toast');
 const cartCountEl = document.querySelector('.cart-count');
 
 // --- 1. CUSTOM CURSOR LOGIC ---
-// Only activate if not a touch device
 const isTouchDevice = 'ontouchstart' in document.documentElement;
 
 if (!isTouchDevice) {
@@ -14,11 +13,11 @@ if (!isTouchDevice) {
         const posX = e.clientX;
         const posY = e.clientY;
 
-        // Dot follows cursor instantly
+        // cursor position
         cursorDot.style.left = `${posX}px`;
         cursorDot.style.top = `${posY}px`;
 
-        // Outline follows with a slight delay
+        // Outline
         cursorOutline.animate({
             left: `${posX}px`,
             top: `${posY}px`
@@ -36,8 +35,7 @@ if (!isTouchDevice) {
     });
 }
 
-// --- 2. 3D TILT EFFECT (HERO CARDS) ---
-// Disable heavy 3D math on mobile to save battery/performance
+// --- 3D TILT EFFECT 
 if (window.innerWidth > 768) {
     const tiltElements = document.querySelectorAll('.tilt-element');
 
@@ -64,7 +62,7 @@ if (window.innerWidth > 768) {
     });
 }
 
-// --- 3. SCROLL REVEAL ANIMATION ---
+// --- SCROLL REVEAL ANIMATION ---
 const revealElements = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver((entries) => {
@@ -77,7 +75,7 @@ const observer = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => observer.observe(el));
 
-// --- 4. NAVBAR SCROLL EFFECT ---
+// ---NAVBAR SCROLL EFFECT ---
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -86,11 +84,10 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// --- 5. INTERACTION & TOAST ---
+// ---INTERACTION & TOAST ---
 let cartCount = 0;
 
 function actionTrigger(msg) {
-    // Update Cart Logic if applicable
     if(msg.includes('Selected') || msg.includes('Added')) {
         cartCount++;
         cartCountEl.innerText = cartCount;
